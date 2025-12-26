@@ -5,7 +5,7 @@ def task1(s):
     # s — строка вида "подстрока1,подстрока2"
     # вернуть кортеж: (len(sub1) > len(sub2), sub1==sub2, sub2 in sub1)
     s = input()
-    first, second = s.split('_')
+    first, second, *_ = s.split('_') + ['', '']
 
     print(len(first) > len(second))
     print(first == second)
@@ -49,7 +49,7 @@ def task6(s):
     s_lower = s.lower()
     s_no_spaces = s.replace(' ', '')
 
-print(s_no_spaces == s_no_spaces[::-1] and ' ' not in s)
+    print(s_no_spaces == s_no_spaces[::-1] and ' ' not in s)
 # ---------- ЗАДАНИЕ 6 ----------
 def task7(n):
     # n — целое число
